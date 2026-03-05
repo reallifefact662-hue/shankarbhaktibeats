@@ -1,0 +1,19 @@
+{
+  "name": "naam-jaap-web3",
+  "version": "1.0.0",
+  "description": "Naam Jaap Counter with server-side protection",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build:obfuscate": "javascript-obfuscator js/app.js --output js/app.obf.js --compact true --control-flow-flattening true && terser js/app.obf.js -c -m -o js/app.min.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.0.0",
+    "terser": "^5.0.0",
+    "nodemon": "^2.0.0"
+  }
+}
